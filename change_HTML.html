@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p><b>JavaScript can change HTML content</b></p>
+    <p id="demo"></p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="Hello JavaScript!"'>Click Me!</button>
+
+    <p><b>JavaScript can change attribute values</b></p>
+    <button onclick="document.getElementById('myImage').src='https://image.shutterstock.com/image-photo/heavy-rain-tree-parking-260nw-681346432.jpg'">Rain</button>
+    <img style="width: 100px" src="https://image.shutterstock.com/image-photo/heavy-rain-tree-parking-260nw-681346432.jpg" alt="" id="myImage">
+    <button onclick="document.getElementById('myImage').src='https://images.unsplash.com/photo-1431629087622-72b063a59b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzZXJ0JTIwc2FuZHxlbnwwfHwwfHw%3D&w=1000&q=80'">Desert</button>
+
+    <p><b>JavaScript can change CSS style of an element</b></p>
+    <p id="demo1">Hello JavaScript!</p>
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='100px'">Click Me!</button>
+
+    <p><b>JavaScript can hide/show an element</b></p>
+    <button type="button" onclick="document.getElementById('demo2').style.display='none'">Hide Me!</button>
+    <p id="demo2">Hello JavaScript!</p>
+    <button type="button" onclick="document.getElementById('demo2').style.display='block'">Show Me!</button>
+</body>
+</html>
