@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function myFunc(){
+            document.getElementById("demo").innerHTML
+            = "Hello JavaScript!" ;
+        }
+
+        function myFunc2(name){
+            document.getElementById("demo2").innerHTML
+            ="Welcome " + name; 
+        }
+
+        function myFunc3(txt){
+            document.getElementById("demo3").innerHTML=txt;
+        }
+    </script>
+
+    <button onclick="myFunc()">Click Me!</button>
+    <button onclick="myFunc2('Alisha')">Click Me!</button><br>
+    <button onclick="myFunc3('Good Morning!')">In Morning</button>
+    <button onclick="myFunc3('Good Evening!')">In Evening</button>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+</body>
+</html>
