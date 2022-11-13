@@ -21,6 +21,13 @@
         function myFunc3(txt){
             document.getElementById("demo3").innerHTML=txt;
         }
+
+        function myFunc4(a,b){
+            return a * b;
+        }
+        document.getElementById("demo4").innerHTML= myFunc4(4, 3);
+
+        document.getElementById("demo5").innerHTML= myFunc4;
     </script>
 
     <button onclick="myFunc()">Click Me!</button>
@@ -28,8 +35,11 @@
     <button onclick="myFunc3('Good Morning!')">In Morning</button>
     <button onclick="myFunc3('Good Evening!')">In Evening</button>
 
+
     <p id="demo"></p>
     <p id="demo2"></p>
     <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
 </body>
 </html>
