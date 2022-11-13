@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>JavaScript Variables</h3>
+    <p id="demo"></p>
+    <h3>JavaScript Variables as algebra</h3>
+    <p id="demo2"></p>
+    <h3>JavaScript numbers and strings</h3>
+    <p id="demo3"></p>
+    <h3>Declaring many varibles in one statement</h3>
+    <p id="demo4"></p>
+    <h3>A variable without a value returns the value undefined</h3>
+    <p id="demo5"></p>
+    <h3>Redeclaring a variable will not destroy the value</h3>
+    <p id="demo6"></p>
+    <h3>Adding strings and numbers</h3>
+    <p id="demo7"></p>
+    <script>
+        var x = 2;
+        document.getElementById("demo").innerHTML=x;
+
+        const price1=5;
+        const price2 = 6;
+        let total = price1 + price2;
+        document.getElementById("demo2").innerHTML="The price is : " + total;
+
+        const pi = 3.14;
+        let person= "John Doe";
+        document.getElementById("demo3").innerHTML=pi + "<br>" + person;
+
+        let carname="Volvo", price=200;
+        document.getElementById("demo4").innerHTML=carname+"<br>"+price; 
+
+        let fruit;
+        document.getElementById("demo5").innerHTML=fruit;
+
+        var animal = "Dog";
+        var animal;
+        document.getElementById("demo6").innerHTML=animal;
+
+        let y="5" + 2 + 3;
+        document.getElementById("demo7").innerHTML=y;
+    </script>
+</body>
+</html>
