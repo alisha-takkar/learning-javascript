@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>Strings can be written in double or single quotes.</h3>
+    <p id="demo"></p>
+    <h3>Backlash before quotes accepts quotes as quotes</h3>
+    <p id="demo2"></p>
+    <h3>The Length property</h3>
+    <p id="demo3"></p>
+    <h3>First occurrence of a text in a string - indexOf()</h3>
+    <p id="demo4"></p>
+    <h3>Search for text in a string a nd resturn text if found - match()</h3>
+    <p id="demo5"></p>
+    <h3>Replace characters in a string - replace()</h3>
+    <P id="demo6">Hello World!</P>
+    <h3>Convert string to uppercase - toUpperCase()</h3>
+    <p id="demo7">Good Morning!</p>
+    <h3>Convert string to lowercase - toLowerCase()</h3>
+    <p id="demo8">Good Evening!</p>
+    <h3>Split a string into an array - split()</h3>
+    <p id="demo9"></p>
+
+    <script>
+        var name1 = 'Adit';
+        var name2 = "Adit";
+        document.getElementById("demo").innerHTML
+        = name1 + " " + name2;
+
+        var x = 'It\s alright';
+        var y = "We are the\"Vikings\".";
+        document.getElementById("demo2").innerHTML
+        = x + "<br>" + y;
+
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo3").innerHTML
+        = text.length;
+
+        let a = "PLease locate where 'locate' occurs!"
+        document.getElementById("demo4").innerHTML
+        = a.indexOf("locate");
+
+        var str = "The rain in SPAIN stays mainly in the plain";
+        var res = str.match(/ain/g);
+        document.getElementById("demo5").innerHTML
+        =res;
+
+        let b = document.getElementById("demo6").innerHTML;
+        document.getElementById("demo6").innerHTML
+        =b.replace("World", "Alisha");
+
+        let c = document.getElementById("demo7").innerHTML;
+        document.getElementById("demo7").innerHTML
+        = c.toUpperCase();
+
+        let d = document.getElementById("demo8").innerHTML;
+        document.getElementById("demo8").innerHTML
+        =d.toLowerCase();
+
+        let e = "a,b,c,d,e,f";
+        const arr = e.split(",");
+        document.getElementById("demo9").innerHTML
+        =arr[0];
+    </script>
+
+</body>
+</html>
