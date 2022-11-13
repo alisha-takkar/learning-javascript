@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p><p id="demo5"></p>
+    <p id="demo6"></p><p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML
+        =3.14 + "<br>" + 3;
+
+        document.getElementById("demo2").innerHTML
+        =123e5 + "<br>" + 123e-5;
+
+        let c = 999999999999999;
+        let d= 9999999999999999;
+        document.getElementById("demo3").innerHTML
+        =c+"<br>"+d;
+
+        let e = 0.2 + 0.1;
+        document.getElementById("demo4").innerHTML
+        =e+"<br>";
+        let f= (0.2*10 + 0.1*10)/10
+        document.getElementById("demo5").innerHTML
+        =f;
+
+        document.getElementById("demo6").innerHTML
+        ="The result is "+ 10+20+"<br>";
+        document.getElementById("demo7").innerHTML
+        =10+20;
+       
+       document.getElementById("demo8").innerHTML
+       ="100"/"10" + "<br>" + "100"*"10" + "<br>"
+        + "100"+"10";
+
+        document.getElementById("demo9").innerHTML
+        =100/"Apple";
+
+        document.getElementById("demo10").innerHTML
+        =isNaN(100/"Apple") + "<br>" + isNaN(100/"10");
+
+        document.getElementById("demo11").innerHTML
+        =(NaN/2);
+
+        document.getElementById("demo12").innerHTML
+        =("5"+NaN);
+
+        document.getElementById("demo13").innerHTML
+        =typeof NaN + "<br>" + typeof Infinity;
+
+        document.getElementById("demo14").innerHTML
+        =(2/0) + "<br>" + (-2/0);
+
+        document.getElementById("demo15").innerHTML
+        =typeof 123 + "<br>" + typeof new Number(123);
+</script>
+</body>
+</html>
