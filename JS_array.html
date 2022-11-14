@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>Original array : </h3> 
+    <p id="demo"></p>
+
+    <h3>push() - adding an element</h3>
+    <p id="demo2"></p>
+
+    <h3>pop() - remove last element</h3>
+    <p id="demo3"></p>
+
+    <h3>concat() - join two arrays</h3>
+    <p id="demo4"></p>
+
+    <h3>splice() - add an element at position 2</h3>
+    <p id="demo5"></p>
+
+    <h3>toString() - convert an array to String</h3>
+    <p id="demo6"></p>
+
+    <h3>unshift() - add new element to beginning of an array</h3>
+    <p id="demo7"></p>
+
+    <h3>shift() - remove the first element</h3>
+    <p id="demo8"></p>
+
+    <h3>slice() - select elements</h3>
+    <p id="demo9"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple",
+    "Mango"];
+    document.getElementById("demo").innerHTML
+    =fruits;
+
+    fruits.push("Kiwi");
+    document.getElementById("demo2").innerHTML
+    =fruits;
+
+    fruits.pop();
+    document.getElementById("demo3").innerHTML
+    =fruits;
+
+    const veg = ["Potato", "Tomato", "Spinach"];
+    const drinks = ["coke", "pepsi"];
+    const food = fruits.concat(veg,drinks);
+    document.getElementById("demo4").innerHTML
+    =food;
+
+    drinks.splice(1,0,"Limca");
+    document.getElementById("demo5").innerHTML = drinks;
+
+    document.getElementById("demo6").innerHTML
+    = veg.toString();
+
+    veg.unshift("Lemon");
+    document.getElementById("demo7").innerHTML=veg;
+
+    veg.shift();
+    document.getElementById("demo8").innerHTML=veg;
+
+    document.getElementById("demo9").innerHTML
+    =fruits.slice(1,3)
+    </script>
+</body>
+</html>
