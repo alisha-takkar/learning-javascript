@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>toString() can output numbers from base 2 to 36</h3>
+    <p id="demo"></p>
+
+    <h3>The valueOf() method returns a number as a number:</h3>
+    <p id="demo2"></p>
+
+    <h3>toExponential() returns a number with exponential notation</h3>
+    <p id="demo3"></p>
+
+    <h3>toFixed() rounds a number to a number of digits</h3>
+    <p id="demo4"></p>
+
+    <h3>toPrecision() returns a string written to a specific length</h3>
+    <p id="demo5"></p>
+
+    <h3>Global method Number() converts variables to numbers</h3>
+    <p id="demo6"></p>
+
+    <h3>Global methods parseInt() and pareseFloat() converts strings to numbers</h3>
+    <p id="demo7"></p>
+
+    <h3>MAX_VALUE returns largest possible number in JavaScript
+        and MIN_VALUE returns smallest possible number in JavaScript
+    </h3>
+    <p id="demo8"></p>
+
+    <h3>POSITIVE_INFINITY represents Infinity and
+        NEGATIVE_INFINITY represents Nagative Infinity
+    </h3>
+    <p id="demo9"></p>
+
+    <h3>Using a Number property on a variable will return undefined</h3>
+    <p id="demo10"></p>
+
+    <script>
+        let number =23;
+        document.getElementById("demo").innerHTML
+        ="Decimal 23 =" + "<br>" + 
+        "Hexatrigesimal (base 36): " + number.toString(36) + "<br>"
+        + "Duotrigesimal (base 32):" + number.toString(32) + "<br>"
+        + "Hexadecimal (base 16):" + number.toString(16) + "<br>" 
+        + "Duodecimal (base 12):" + number.toString(12) + "<br>"
+        + "Decimal (base 10):" + number.toString(10) + "<br>"
+        + "Octal (base 8):" + number.toString(8) + "<br>"
+        + "Binary(base 2):" + number.toString(2); 
+
+        document.getElementById("demo2").innerHTML
+        =(123).valueOf() + "<br>" + (100+23).valueOf();
+
+        document.getElementById("demo3").innerHTML
+        =(9.656).toExponential() + "<br>" +
+        (9.656).toExponential(2) + "<br>" +
+        (9.656).toExponential(4) + "<br>" +
+        (9.656).toExponential(6);
+
+        document.getElementById("demo4").innerHTML
+        = (9.656).toFixed() + "<br>" +
+        (9.656).toFixed(2) + "<br>" +
+        (9.656).toFixed(4) + "<br>" +
+        (9.656).toFixed(6);
+
+        document.getElementById("demo5").innerHTML
+        = (9.656).toPrecision() + "<br>" +
+        (9.656).toPrecision(2) + "<br>" +
+        (9.656.toPrecision(4) + "<br>") + 
+        (9.656).toPrecision(6);
+
+        document.getElementById("demo6").innerHTML
+        = Number(true) + "<br>" +
+        Number(false) + "<br>" +
+        Number("10") + "<br>" +
+        Number("  10") + "<br>" +
+        Number("10.33") + "<br>" +
+        Number("10,33") + "<br>" +
+        Number("10 33") + "<br>" +
+        Number("John") + "<br>" +
+        Number(new Date("2022-11-14"));
+
+        document.getElementById("demo7").innerHTML
+        = parseInt("-10") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("10,6") + "<br>" +
+        parseInt("10 years") + "<br>" +
+        parseFloat("-10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("10 6") + "<br>" +
+        parseFloat("10 years") + "<br>" + 
+        parseFloat("years 10") ;
+
+        document.getElementById("demo8").innerHTML
+        =Number.MAX_VALUE + "<br>" + Number.MIN_VALUE;
+
+        document.getElementById("demo9").innerHTML
+        =Number.POSITIVE_INFINITY + "<br>" + Number.NEGATIVE_INFINITY;
+
+        document.getElementById("demo10").innerHTML
+        =(6).MAX_VALUE;
+    </script>
+</body>
+</html>
