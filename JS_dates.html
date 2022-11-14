@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Date() to display current date and time</h3>
+    <p id="demo"></p>
+
+    <h3>getFullyear()</h3>
+    <p id="demo2"></p>
+
+    <h3>getTime() to calculate number of miliseconds since 1970</h3>
+    <p id="demo3"></p>
+
+    <h3>setFullYear() sets the year of date object</h3>
+    <p id="demo4"></p>
+
+    <h3>getDay() to get weekday as a number</h3>
+    <p id="demo5"></p>
+    <p>You can use array of names to return 
+        weekday as a name
+    </p>
+    <p id="demo6"></p>;
+
+    <script>
+        document.getElementById("demo").innerHTML
+        =new Date();
+
+        document.getElementById("demo2").innerHTML
+        =new Date().getFullYear();
+
+        document.getElementById("demo3").innerHTML
+        =new Date().getTime();
+
+        document.getElementById("demo4").innerHTML
+        =new Date().setFullYear(2020);
+
+        document.getElementById("demo5").innerHTML
+        = new Date().getDay();
+
+        const days = ["Sunday", "Monday", "Wednesday",
+    "Thursday", "Friday", "Saturday", "Sunday"];
+    document.getElementById("demo6").innerHTML
+    = days[new Date().getDay()];
+    </script>
+</body>
+</html>
