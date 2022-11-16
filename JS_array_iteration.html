@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>Array.forEach() - calls a function once for each element</h3>
+    <p id="demo"></p>
+
+    <h3>Array.map() - creates a new array by performing a
+        function on each aray element</h3>
+        <p id="demo2"></p>
+
+    <h3>Array.filter() - Creates a new array will all
+        array elements that pass a test </h3>
+        <p id="demo3"></p>  
+
+        <h3>Array.reduce()</h3>
+        <p id="demo4"></p>  
+
+        <h3>Array.reduceRight()</h3>
+        <p id="demo5"></p>
+
+        <h3>Array.every() - checks if all array values 
+            pass a test
+        </h3>
+        <p id="demo6"></p>
+
+        <h3>Array.some() - checks if some array values pass
+            a test
+        </h3>
+        <p id="demo7"></p>
+
+        <h3>Array.indexOf()</h3>
+        <p id="demo8"></p>
+
+        <h3>Array.find()</h3>
+        <p id="demo9"></p>
+
+        <h3>Array.findIndex()</h3>
+        <p id="demo10"></p>
+
+    <script>
+        const numbers = [45,4,9,16,25];
+        let txt = "";
+        numbers.forEach(function myFunc(value){
+            txt += value + "<br>";
+        });
+        document.getElementById("demo").innerHTML=txt;
+
+        const numbers2 = numbers.map(function fun(value){
+            return value*2;
+        });
+        document.getElementById("demo2").innerHTML=numbers2;
+
+        function f(value){
+            return value > 18;
+        }
+        const over18 = numbers.filter(f);
+        document.getElementById("demo3").innerHTML=over18;
+
+        let sum = numbers.reduce(function f2(total,value){
+            return total + value;
+        });
+        document.getElementById("demo4").innerHTML=sum;
+
+        let sum2 = numbers.reduceRight(function f2(total,value){
+            return total + value;
+        });
+        document.getElementById("demo5").innerHTML=sum2;
+
+        let allOver18 = numbers.every(f);
+        document.getElementById("demo6").innerHTML=
+        "All over 18 is " + allOver18;
+
+        let someOver18 = numbers.some(f);
+        document.getElementById("demo7").innerHTML=
+        "Some over 18 is " + someOver18;
+
+        let pos = numbers.indexOf(16);
+        document.getElementById("demo8").innerHTML=
+        "16 is found at position: " + pos;
+
+        let first = numbers.find(f);
+        document.getElementById("demo9").innerHTML
+        ="First number over 18 is: " + first;
+
+        document.getElementById("demo10").innerHTML
+        ="First number over 18 has index of " +
+        numbers.findIndex(f);
+    </script>
+</body>
+</html>
