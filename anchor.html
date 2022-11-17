@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <a href="" name="html"> HTML </a><br>
+    <a href="" name="CSS">CSS</a><br>
+    <a href="" name="JS">JavaScript</a>
+
+    <h3>Finding number of anchors in a documnet</h3>
+    <p id="demo"></p>
+
+    <h3>Finding innerHTML of an anchor in a document</h3>
+    <p id="demo2"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML=
+        document.anchors.length;
+
+        document.getElementById("demo2").innerHTML=
+        document.anchors[0].innerHTML + "<br>" + 
+        document.anchors[1].innerHTML + "<br>" +
+        document.anchors[2].innerHTML;
+    </script>
+</body>
+</html>
