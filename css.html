@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function bgChange(bg){
+            document.body.style.background = bg;
+        }
+    </script>
+</head>
+<body>
+    <h3>Change visibitility of an HTML element</h3>
+    <p id="demo">
+        This is a text.
+        This is a text.
+        This is a text.
+    </p>
+
+    <button onclick="document.getElementById('demo').style.visibility='hidden'">Hide text</button>
+    <button onclick="document.getElementById('demo').style.visibility='visible'">Show text</button>
+
+    <h3>Change background color</h3>
+    <table style="width: 300px;height: 100px">
+        <tr>
+            <td 
+            onmouseover="bgChange(this.style.backgroundColor)"
+            onmouseout="bgChange('transparent')"
+            style="background-color:khaki;">
+        </td>
+        <td 
+            onmouseover="bgChange(this.style.backgroundColor)"
+            onmouseout="bgChange('transparent')"
+            style="background-color:palegreen;">
+        </td>
+        <td 
+            onmouseover="bgChange(this.style.backgroundColor)"
+            onmouseout="bgChange('transparent')"
+            style="background-color:silver;">
+        </td>
+        </tr>
+    </table>
+
+</body>
+</html>
