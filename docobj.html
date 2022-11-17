@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object</title>
+</head>
+<body>
+    <h3>Display all name/value pairs of cookies in a document</h3>
+    <p id="demo"></p>
+    <button onclick="myfunc()">Click Me!</button>
+
+    <h3>Display domain name of server of server that loaded this document</h3>
+    <p id="demo2"></p>
+    <button onclick="myfunc2()">Click Me!</button>
+
+    <h3>Display date and time the document was last modified</h3>
+    <p id="demo3"></p>
+
+    <h3>Display the title of a document</h3>
+    <p id="demo4"></p>
+
+    <h3>Display the full URL of a document</h3>
+    <p id="demo5"></p>
+
+    <h3>Replace the content of a document</h3>
+    <button onclick="myfunc3()">Click Me!</button>
+
+    <h3>Open a new window and add some content</h3>
+    <button onclick="myfunc4()">Click Me!</button>
+
+    <h3>Display number of elements with a specific name</h3>
+    <input type="radio" name="pet" value="cats"> Cats <br>
+    <input type="radio" name="pet" value="dogs"> Dogs
+    <p id="demo6"></p>
+
+    <h3>Display  number of elements with a specific tag name</h3>
+    <p id="demo7"></p>
+
+    <script>
+        function myfunc() {
+            document.getElementById("demo").innerHTML=
+            document.cookie;
+        }
+
+        function myfunc2(){
+            document.getElementById("demo2").innerHTML=
+            document.domain;
+        }
+
+        document.getElementById("demo3").innerHTML=
+        document.lastModified;
+
+        document.getElementById("demo4").innerHTML=
+        document.title;
+
+        document.getElementById("demo5").innerHTML=
+        document.URL;
+
+        function myfunc3(){
+            document.open("text/html", "replace");
+            document.write("Welcome visitor!");
+            document.close();
+        }
+
+        function myfunc4(){
+            var w = window.open();
+            w.document.open();
+            w.document.write("Hello Visitor!");
+            w.document.close();
+        }
+
+        var x= document.getElementsByName("pet");
+        document.getElementById("demo6").innerHTML=
+        "There are " + x.length + " elements named 'pet'.";
+
+        var y =document.getElementsByTagName("h3");
+        document.getElementById("demo7").innerHTML=
+        "There are " + y.length + " headings in this page.";
+    </script>
+</body>
+</html>
