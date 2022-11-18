@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Object</title>
+</head>
+<body>
+    <form action=" " id="f1" name="form1" accept-charset="ISO-8859-1" method="post" target="_self">
+        First name: <input type="text" name="fname" value="First Name"><br>
+        Last name: <input type="text" name="lname" value="Last Name"><br>
+
+        <input type="button" onclick="myfun()" value="Submit">
+        <input type="button" onclick="myfun2()" value="Reset">
+    </form>
+
+    <h3>Value of each element in a form</h3>
+        <p id="demo"></p>
+        
+        <h3>Accepted character set of a form</h3>
+        <p id="demo2"></p>
+
+        <h3>Value of encrypted attribute in a form</h3>
+        <p id="demo3"></p>
+
+        <h3>Number of elements in a form</h3>
+        <p id="demo4"></p>
+
+        <h3>Method of sending form data</h3>
+        <p id="demo5"></p>
+
+        <h3>Name of a form</h3>
+        <p id="demo6"></p>
+
+        <h3>Target of a form</h3>
+        <p id="demo7"></p>
+
+    <script>
+        function mufun(){
+            document.getElementById("f1").submit();
+        }
+
+        function myfun2(){
+            document.getElementById("f1").reset();
+        }
+
+        var x =document.getElementById("f1");
+        var txt = "";
+        for(var i=0; i<x.length; i++){
+            txt += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt ;
+
+        document.getElementById("demo2").innerHTML =
+        document.getElementById("f1").acceptCharset;
+
+        document.getElementById("demo3").innerHTML =
+        document.getElementById("f1").enctype;
+
+        document.getElementById("demo4").innerHTML =
+        document.getElementById("f1").length;
+
+        document.getElementById("demo5").innerHTML =
+        document.getElementById("f1").method;
+
+        document.getElementById("demo6").innerHTML = 
+        document.getElementById("f1").name;
+
+        document.getElementById("demo7").innerHTML =
+        document.getElementById("f1").target;
+    </script>
+</body>
+</html>
