@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Button Object</h1>
+
+    <input type="button" id="btn1" value="btn1" name="example">
+    <input type="button" id="btn2" value="btn2" name="example">
+    <input type="button" id="btn3" value="btn3" name="example">
+
+    <form action="" id="f1">
+        <button id="btn" type="button">btn</button>
+    </form>
+
+    <h3>Disable a button</h3>
+    <button onclick="myfun()" id="disable">Diable btn1</button>
+
+    <h3>Find the name of a button</h3>
+    <p id="demo"></p>
+
+    <h3>Find the type of a button</h3>
+    <p id="demo2"></p>
+
+    <h3>Find the value of a button</h3>
+    <p id="demo3"></p>
+
+    <h3>Find the text displayed on a button</h3>
+    <p id="demo4"></p>
+
+    <h3>Find the id of a form the button belongs to</h3>
+    <p id="demo5"></p>
+
+    <script>
+        function myfun(){
+            document.getElementById("btn1").disabled = true;
+        }
+
+        document.getElementById("demo").innerHTML =
+        document.getElementById("btn1").name;
+
+        document.getElementById("demo2").innerHTML =
+        document.getElementById("btn1").type;
+
+        document.getElementById("demo3").innerHTML =
+        document.getElementById("btn1").value;
+
+        document.getElementById("demo4").innerHTML =
+        document.getElementById("disable").innerHTML;
+
+        document.getElementById("demo5").innerHTML =
+        document.getElementById("btn").form.id;
+    </script>
+</body>
+</html>
