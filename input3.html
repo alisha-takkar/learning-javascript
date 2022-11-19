@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options and Select Objects</title>
+</head>
+<body>
+    <form id="f1">
+        <select id="mySelect">
+          <option>Apple</option>
+          <option>Pear</option>
+          <option>Banana</option>
+          <option>Orange</option>
+        </select>
+</form>        
+<br>
+        <button onclick="disable()">Disable List</button>
+        <button onclick="enable()">Enable List</button><br>
+
+        <h3>Id of form that contains drop-down list</h3>
+        <p id="demo"></p>
+
+        <h3>Number of options in a drop-down list</h3>
+        <p id="demo2"></p>
+
+        <h3>Turn dropdown list into multiline list</h3>
+        <button onclick="changeSize()">Click Me!</button>
+
+        <h3>Select multiple options in a dropdown list</h3>
+        <button onclick="selectMultiple()">Click Me!</button>
+
+        <h3>Display selected option in a dropdown list</h3>
+        <p id="demo3"></p>
+
+        <h3>Display all options from a dropdown list</h3>
+        <p id="demo4"></p>
+
+        <h3>Display the index of selected option in a dropdown list</h3>
+        <p id="demo5"></p>
+
+        <script>
+          function disable(){
+            document.getElementById("mySelect").disabled=true;
+          }
+
+          function enable() {
+            document.getElementById("mySelect").disabled=false;
+          }
+
+          document.getElementById("demo").innerHTML=
+          document.getElementById("mySelect").form.id;
+
+          document.getElementById("demo2").innerHTML=
+          document.getElementById("mySelect").length;
+
+          function changeSize() {
+            document.getElementById("mySelect").size = 
+            document.getElementById("mySelect").length;
+          }
+
+          function selectMultiple(){
+            document.getElementById("mySelect").multiple=true;
+          }
+
+          var obj = document.getElementById("mySelect");
+
+          document.getElementById("demo3").innerHTML=
+          obj.options[obj.selectedIndex].text;
+
+          var txt = "";
+
+          for(var i=0;i<obj.length;i++){
+            txt = txt + " " + obj.options[i].text;
+          }
+          document.getElementById("demo4").innerHTML=txt;
+          
+          document.getElementById("demo5").innerHTML=
+          document.getElementById("mySelect").selectedIndex;
+
+        </script>
+</body>
+</html>
